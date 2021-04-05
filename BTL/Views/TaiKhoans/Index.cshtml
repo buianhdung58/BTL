@@ -1,0 +1,40 @@
+﻿@model IEnumerable<BTL.Models.TaiKhoan>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Danh sách tài khoản</h2>
+
+<p>
+    @Html.ActionLink("Tạo mới tài khoản", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Tendangnhap)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Matkhau)
+        </th>
+        <th><label>Thao tác</label></th>
+    </tr>
+
+@foreach (var item in Model) {
+<tr>
+    <td>
+        @Html.DisplayFor(modelItem => item.Tendangnhap)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Matkhau)
+    </td>
+    <td>
+        @Html.ActionLink("Edit", "Edit", new { id = item.Tendangnhap }) |
+        @Html.ActionLink("Details", "Details", new { id = item.Tendangnhap }) |
+        @Html.ActionLink("Delete", "Delete", new { id = item.Tendangnhap })
+    </td>
+</tr>
+}
+
+</table>

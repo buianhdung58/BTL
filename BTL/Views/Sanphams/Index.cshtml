@@ -1,0 +1,64 @@
+﻿@model IEnumerable<BTL.Models.Sanpham>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Danh sách sản phẩm</h2>
+
+<p>
+    @Html.ActionLink("Thêm mới sản phẩm", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.TenSP)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MaSP)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LoaiSP)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Mausac)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.GiaSP)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Soluong)
+        </th>
+        <th><label>Thao tác</label></th>
+    </tr>
+
+@foreach (var item in Model) {
+<tr>
+    <td>
+        @Html.DisplayFor(modelItem => item.TenSP)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.MaSP)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.LoaiSP)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Mausac)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.GiaSP)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Soluong)
+    </td>
+    <td>
+        @Html.ActionLink("Edit", "Edit", new { id = item.TenSP }) |
+        @Html.ActionLink("Details", "Details", new { id = item.TenSP }) |
+        @Html.ActionLink("Delete", "Delete", new { id = item.TenSP })
+    </td>
+</tr>
+}
+
+</table>
