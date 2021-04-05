@@ -131,6 +131,7 @@
     <Compile Include="Controllers\DonhangsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\KhachhangsController.cs" />
+    <Compile Include="Controllers\NhanviensController.cs" />
     <Compile Include="Controllers\SanphamsController.cs" />
     <Compile Include="Controllers\TaiKhoansController.cs" />
     <Compile Include="Global.asax.cs">
@@ -164,9 +165,18 @@
     <Compile Include="Migrations\202104051234387_Alter_Table_TaiKhoan_TaiKhoan.Designer.cs">
       <DependentUpon>202104051234387_Alter_Table_TaiKhoan_TaiKhoan.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202104051246406_Create_Table_Nhanviens.cs" />
+    <Compile Include="Migrations\202104051246406_Create_Table_Nhanviens.Designer.cs">
+      <DependentUpon>202104051246406_Create_Table_Nhanviens.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202104051249436_Add_Column_Nhanviens_Vitri.cs" />
+    <Compile Include="Migrations\202104051249436_Add_Column_Nhanviens_Vitri.Designer.cs">
+      <DependentUpon>202104051249436_Add_Column_Nhanviens_Vitri.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Donhang.cs" />
     <Compile Include="Models\Khachhang.cs" />
+    <Compile Include="Models\Nhanvien.cs" />
     <Compile Include="Models\PTPMQLYDbContext.cs" />
     <Compile Include="Models\Sanpham.cs" />
     <Compile Include="Models\TaiKhoan.cs" />
@@ -228,6 +238,11 @@
     <Content Include="Views\Donhangs\Details.cshtml" />
     <Content Include="Views\Donhangs\Edit.cshtml" />
     <Content Include="Views\Donhangs\Index.cshtml" />
+    <Content Include="Views\Nhanviens\Create.cshtml" />
+    <Content Include="Views\Nhanviens\Delete.cshtml" />
+    <Content Include="Views\Nhanviens\Details.cshtml" />
+    <Content Include="Views\Nhanviens\Edit.cshtml" />
+    <Content Include="Views\Nhanviens\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -266,6 +281,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202104051234387_Alter_Table_TaiKhoan_TaiKhoan.resx">
       <DependentUpon>202104051234387_Alter_Table_TaiKhoan_TaiKhoan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202104051246406_Create_Table_Nhanviens.resx">
+      <DependentUpon>202104051246406_Create_Table_Nhanviens.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202104051249436_Add_Column_Nhanviens_Vitri.resx">
+      <DependentUpon>202104051249436_Add_Column_Nhanviens_Vitri.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
