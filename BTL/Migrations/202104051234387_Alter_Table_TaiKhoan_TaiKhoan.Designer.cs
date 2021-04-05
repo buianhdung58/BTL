@@ -7,13 +7,13 @@ namespace BTL.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.1.3-40302")]
-    public sealed partial class Alter_Table_Nhanvien_Nhanvien : IMigrationMetadata
+    public sealed partial class Alter_Table_TaiKhoan_TaiKhoan : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(Alter_Table_Nhanvien_Nhanvien));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(Alter_Table_TaiKhoan_TaiKhoan));
         
         string IMigrationMetadata.Id
         {
-            get { return "202104041417092_Alter_Table_Nhanvien_Nhanvien"; }
+            get { return "202104051234387_Alter_Table_TaiKhoan_TaiKhoan"; }
         }
         
         string IMigrationMetadata.Source

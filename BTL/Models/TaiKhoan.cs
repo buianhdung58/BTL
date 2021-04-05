@@ -11,6 +11,8 @@ namespace BTL.Models
     public class TaiKhoan
     {
         [Key]
+        [StringLength(20)]
+
         public string Tendangnhap { get; set; }
         public string Matkhau { get; set; }
     }

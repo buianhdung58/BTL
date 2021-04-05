@@ -131,7 +131,6 @@
     <Compile Include="Controllers\DonhangsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\KhachhangsController.cs" />
-    <Compile Include="Controllers\NhanvienController.cs" />
     <Compile Include="Controllers\SanphamsController.cs" />
     <Compile Include="Controllers\TaiKhoansController.cs" />
     <Compile Include="Global.asax.cs">
@@ -161,18 +160,13 @@
     <Compile Include="Migrations\202103151423091_Create_Table_Donhangs.Designer.cs">
       <DependentUpon>202103151423091_Create_Table_Donhangs.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202104041334322_Create_Table_Nhanvien.cs" />
-    <Compile Include="Migrations\202104041334322_Create_Table_Nhanvien.Designer.cs">
-      <DependentUpon>202104041334322_Create_Table_Nhanvien.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202104041417092_Alter_Table_Nhanvien_Nhanvien.cs" />
-    <Compile Include="Migrations\202104041417092_Alter_Table_Nhanvien_Nhanvien.Designer.cs">
-      <DependentUpon>202104041417092_Alter_Table_Nhanvien_Nhanvien.cs</DependentUpon>
+    <Compile Include="Migrations\202104051234387_Alter_Table_TaiKhoan_TaiKhoan.cs" />
+    <Compile Include="Migrations\202104051234387_Alter_Table_TaiKhoan_TaiKhoan.Designer.cs">
+      <DependentUpon>202104051234387_Alter_Table_TaiKhoan_TaiKhoan.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Donhang.cs" />
     <Compile Include="Models\Khachhang.cs" />
-    <Compile Include="Models\Nhanvien.cs" />
     <Compile Include="Models\PTPMQLYDbContext.cs" />
     <Compile Include="Models\Sanpham.cs" />
     <Compile Include="Models\TaiKhoan.cs" />
@@ -234,8 +228,6 @@
     <Content Include="Views\Donhangs\Details.cshtml" />
     <Content Include="Views\Donhangs\Edit.cshtml" />
     <Content Include="Views\Donhangs\Index.cshtml" />
-    <Content Include="Views\Nhanvien\Index.cshtml" />
-    <Content Include="Views\Nhanvien\Create.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -272,11 +264,8 @@
     <EmbeddedResource Include="Migrations\202103151423091_Create_Table_Donhangs.resx">
       <DependentUpon>202103151423091_Create_Table_Donhangs.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202104041334322_Create_Table_Nhanvien.resx">
-      <DependentUpon>202104041334322_Create_Table_Nhanvien.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202104041417092_Alter_Table_Nhanvien_Nhanvien.resx">
-      <DependentUpon>202104041417092_Alter_Table_Nhanvien_Nhanvien.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202104051234387_Alter_Table_TaiKhoan_TaiKhoan.resx">
+      <DependentUpon>202104051234387_Alter_Table_TaiKhoan_TaiKhoan.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
