@@ -131,8 +131,11 @@
     <Compile Include="Controllers\DonhangsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\KhachhangsController.cs" />
+    <Compile Include="Controllers\Nhanvien1Controller.cs" />
     <Compile Include="Controllers\NhanviensController.cs" />
+    <Compile Include="Controllers\PersonController.cs" />
     <Compile Include="Controllers\SanphamsController.cs" />
+    <Compile Include="Controllers\StudentsController.cs" />
     <Compile Include="Controllers\TaiKhoansController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -173,12 +176,27 @@
     <Compile Include="Migrations\202104051249436_Add_Column_Nhanviens_Vitri.Designer.cs">
       <DependentUpon>202104051249436_Add_Column_Nhanviens_Vitri.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202104060201312_Create_Table_Persons.cs" />
+    <Compile Include="Migrations\202104060201312_Create_Table_Persons.Designer.cs">
+      <DependentUpon>202104060201312_Create_Table_Persons.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202104060227085_Create_Table_Student.cs" />
+    <Compile Include="Migrations\202104060227085_Create_Table_Student.Designer.cs">
+      <DependentUpon>202104060227085_Create_Table_Student.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202104060234264_Create_Table_Nhanvien1.cs" />
+    <Compile Include="Migrations\202104060234264_Create_Table_Nhanvien1.Designer.cs">
+      <DependentUpon>202104060234264_Create_Table_Nhanvien1.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Donhang.cs" />
     <Compile Include="Models\Khachhang.cs" />
     <Compile Include="Models\Nhanvien.cs" />
+    <Compile Include="Models\Nhanvien1.cs" />
+    <Compile Include="Models\Person.cs" />
     <Compile Include="Models\PTPMQLYDbContext.cs" />
     <Compile Include="Models\Sanpham.cs" />
+    <Compile Include="Models\Student.cs" />
     <Compile Include="Models\TaiKhoan.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -243,6 +261,21 @@
     <Content Include="Views\Nhanviens\Details.cshtml" />
     <Content Include="Views\Nhanviens\Edit.cshtml" />
     <Content Include="Views\Nhanviens\Index.cshtml" />
+    <Content Include="Views\Person\Create.cshtml" />
+    <Content Include="Views\Person\Delete.cshtml" />
+    <Content Include="Views\Person\Details.cshtml" />
+    <Content Include="Views\Person\Edit.cshtml" />
+    <Content Include="Views\Person\Index.cshtml" />
+    <Content Include="Views\Students\Create.cshtml" />
+    <Content Include="Views\Students\Delete.cshtml" />
+    <Content Include="Views\Students\Details.cshtml" />
+    <Content Include="Views\Students\Edit.cshtml" />
+    <Content Include="Views\Students\Index.cshtml" />
+    <Content Include="Views\Nhanvien1\Create.cshtml" />
+    <Content Include="Views\Nhanvien1\Delete.cshtml" />
+    <Content Include="Views\Nhanvien1\Details.cshtml" />
+    <Content Include="Views\Nhanvien1\Edit.cshtml" />
+    <Content Include="Views\Nhanvien1\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -287,6 +320,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202104051249436_Add_Column_Nhanviens_Vitri.resx">
       <DependentUpon>202104051249436_Add_Column_Nhanviens_Vitri.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202104060201312_Create_Table_Persons.resx">
+      <DependentUpon>202104060201312_Create_Table_Persons.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202104060227085_Create_Table_Student.resx">
+      <DependentUpon>202104060227085_Create_Table_Student.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202104060234264_Create_Table_Nhanvien1.resx">
+      <DependentUpon>202104060234264_Create_Table_Nhanvien1.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

@@ -17,6 +17,7 @@ namespace BTL.Models
         public virtual DbSet<Khachhang> Khachhangs { get; set; }
         public virtual DbSet<Donhang> Donhangs { get; set; }
         public virtual DbSet<Nhanvien> Nhanviens { get; set; }
+        public virtual DbSet<Person> Persons { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
@@ -25,5 +26,9 @@ namespace BTL.Models
                 .IsFixedLength()
                 .IsUnicode(false);
         }
+
+        public System.Data.Entity.DbSet<BTL.Models.Student> Students { get; set; }
+
+        public System.Data.Entity.DbSet<BTL.Models.Nhanvien1> Nhanvien1 { get; set; }
     }
 }

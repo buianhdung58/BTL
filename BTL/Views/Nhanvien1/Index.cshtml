@@ -1,0 +1,52 @@
+﻿@model IEnumerable<BTL.Models.Nhanvien1>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.NhanvienID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Congty)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FullName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CCCD)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+<tr>
+    <td>
+        @Html.DisplayFor(modelItem => item.NhanvienID)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Congty)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.FullName)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.CCCD)
+    </td>
+    <td>
+        @Html.ActionLink("Edit", "Edit", new { id = item.CCCD }) |
+        @Html.ActionLink("Details", "Details", new { id = item.CCCD }) |
+        @Html.ActionLink("Delete", "Delete", new { id = item.CCCD })
+    </td>
+</tr>
+}
+
+</table>
