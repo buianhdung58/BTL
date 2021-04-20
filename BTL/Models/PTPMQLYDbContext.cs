@@ -18,6 +18,7 @@ namespace BTL.Models
         public virtual DbSet<Donhang> Donhangs { get; set; }
         public virtual DbSet<Nhanvien> Nhanviens { get; set; }
         public virtual DbSet<Person> Persons { get; set; }
+        public virtual DbSet<Account> Accounts { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {

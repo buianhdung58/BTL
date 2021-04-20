@@ -48,11 +48,21 @@ namespace BTL.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Create([Bind(Include = "CCCD,NhanvienID,Congty,FullName")] Nhanvien1 nhanvien1)
         {
+
             if (ModelState.IsValid)
             {
-                db.Nhanvien1.Add(nhanvien1);
-                db.SaveChanges();
-                return RedirectToAction("Index");
+                try
+                {
+                    db.Nhanvien1.Add(nhanvien1);
+                    db.SaveChanges();
+                    return RedirectToAction("Index");
+                }
+                catch (Exception)
+                {
+
+                    ModelState.AddModelError("Error","Khoa chinh khong duoc trung nhau");
+                }
+                
             }
 
             return View(nhanvien1);

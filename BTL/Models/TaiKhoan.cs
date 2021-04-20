@@ -12,7 +12,6 @@ namespace BTL.Models
     {
         [Key]
         [StringLength(20)]
-
         public string Tendangnhap { get; set; }
         public string Matkhau { get; set; }
     }
