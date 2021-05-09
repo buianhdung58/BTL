@@ -129,10 +129,21 @@ namespace BTL.Controllers
 
             //doc du lieu tu file Excel
             DataTable dt = ReadDataFromExcelFile(_path);
-            CopyDataByBulk(dt);
-            //DataTable dt = excel.ReadDataFromExcelFile(_path);
-            return View("Index");
+            //CopyDataByBulk(dt);
+            for (int i = 0; i < dt.Rows.Count; i++)
+            {
+                Khachhang kh = new Khachhang();
+                kh.TenKH = dt.Rows[i][0].ToString();
+                kh.MaKH = dt.Rows[i][1].ToString();
+                db.Khachhangs.Add(kh);
+                db.SaveChanges();
+            }
+
+            // CopyDataByBulk(excel.ReadDataFromExcelFile(_path));
+            //  return View("Index");
+            return RedirectToAction("Index");
         }
+        //upload file
         public DataTable ReadDataFromExcelFile(string filepath)
         {
             string connectionString = "";
@@ -180,14 +191,16 @@ namespace BTL.Controllers
             }
             return data;
         }
+
+        //copy large data from datatable to sqlserver
         private void CopyDataByBulk(DataTable dt)
         {
             //lay ket noi voi database luu trong file webconfig
             SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["DB Context"].ConnectionString);
             SqlBulkCopy bulkcopy = new SqlBulkCopy(con);
-            bulkcopy.DestinationTableName = "KhachHangs";
-            bulkcopy.ColumnMappings.Add(0, "TenKhachHang");
-            bulkcopy.ColumnMappings.Add(1, "MaKhachHang");
+            bulkcopy.DestinationTableName = "Khachhangs";
+            bulkcopy.ColumnMappings.Add(0, "TenKH");
+            bulkcopy.ColumnMappings.Add(1, "MaKH");
             con.Open();
             bulkcopy.WriteToServer(dt);
             con.Close();
