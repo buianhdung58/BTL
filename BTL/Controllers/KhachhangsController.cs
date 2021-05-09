@@ -50,7 +50,7 @@ namespace BTL.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "TenKH,MaKH,SdtKH,Diachi,Tuoi")] Khachhang khachhang)
+        public ActionResult Create([Bind(Include = "TenKH,MaKH,SdtKH,Diachi")] Khachhang khachhang)
         {
             if (ModelState.IsValid)
             {
@@ -82,7 +82,7 @@ namespace BTL.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "TenKH,MaKH,SdtKH,Diachi,Tuoi")] Khachhang khachhang)
+        public ActionResult Edit([Bind(Include = "TenKH,MaKH,SdtKH,Diachi")] Khachhang khachhang)
         {
             if (ModelState.IsValid)
             {
@@ -121,20 +121,22 @@ namespace BTL.Controllers
         public ActionResult UploadFile(HttpPostedFileBase file)
         {
             //dat ten cho file
-            string _FileName = "File Name";
+            string _FileName = "Khachhang.xlsx";
             //duong dan luu file
             string _path = Path.Combine(Server.MapPath("~/Uploads/Excels"), _FileName);
             //luu file len server
             file.SaveAs(_path);
 
-            //doc du lieu tu file Excel
+            //doc du lieu tu file excel
             DataTable dt = ReadDataFromExcelFile(_path);
-            //CopyDataByBulk(dt);
+            //   CopyDataByBulk(dt);
             for (int i = 0; i < dt.Rows.Count; i++)
             {
                 Khachhang kh = new Khachhang();
                 kh.TenKH = dt.Rows[i][0].ToString();
                 kh.MaKH = dt.Rows[i][1].ToString();
+                kh.SdtKH = dt.Rows[i][1].ToString();
+                kh.Diachi = dt.Rows[i][1].ToString();
                 db.Khachhangs.Add(kh);
                 db.SaveChanges();
             }
@@ -192,20 +194,22 @@ namespace BTL.Controllers
             return data;
         }
 
+
         //copy large data from datatable to sqlserver
         private void CopyDataByBulk(DataTable dt)
         {
             //lay ket noi voi database luu trong file webconfig
-            SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["DB Context"].ConnectionString);
+            SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["PTPMQLYDbContext"].ConnectionString);
             SqlBulkCopy bulkcopy = new SqlBulkCopy(con);
             bulkcopy.DestinationTableName = "Khachhangs";
             bulkcopy.ColumnMappings.Add(0, "TenKH");
             bulkcopy.ColumnMappings.Add(1, "MaKH");
+            bulkcopy.ColumnMappings.Add(2, "SdtKH");
+            bulkcopy.ColumnMappings.Add(3, "Diachi");
             con.Open();
             bulkcopy.WriteToServer(dt);
             con.Close();
         }
-
         protected override void Dispose(bool disposing)
         {
             if (disposing)

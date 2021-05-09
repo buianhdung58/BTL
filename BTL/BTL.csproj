@@ -149,18 +149,6 @@
     <Compile Include="Migrations\202103151323119_Create_Table_Sanphams.Designer.cs">
       <DependentUpon>202103151323119_Create_Table_Sanphams.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202103151327290_Create_Table_Khachhangs.cs" />
-    <Compile Include="Migrations\202103151327290_Create_Table_Khachhangs.Designer.cs">
-      <DependentUpon>202103151327290_Create_Table_Khachhangs.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202103151330290_Add_Column_Khachhangs_emailKH.cs" />
-    <Compile Include="Migrations\202103151330290_Add_Column_Khachhangs_emailKH.Designer.cs">
-      <DependentUpon>202103151330290_Add_Column_Khachhangs_emailKH.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202103151333560_Alter_Column_Khachhangs_emailKH_Tuoi.cs" />
-    <Compile Include="Migrations\202103151333560_Alter_Column_Khachhangs_emailKH_Tuoi.Designer.cs">
-      <DependentUpon>202103151333560_Alter_Column_Khachhangs_emailKH_Tuoi.cs</DependentUpon>
-    </Compile>
     <Compile Include="Migrations\202103151423091_Create_Table_Donhangs.cs" />
     <Compile Include="Migrations\202103151423091_Create_Table_Donhangs.Designer.cs">
       <DependentUpon>202103151423091_Create_Table_Donhangs.cs</DependentUpon>
@@ -196,6 +184,10 @@
     <Compile Include="Migrations\202104200116262_admn.cs" />
     <Compile Include="Migrations\202104200116262_admn.Designer.cs">
       <DependentUpon>202104200116262_admn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202105090754431_Create_table_Khanhhang.cs" />
+    <Compile Include="Migrations\202105090754431_Create_table_Khanhhang.Designer.cs">
+      <DependentUpon>202105090754431_Create_table_Khanhhang.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Account.cs" />
@@ -605,11 +597,6 @@
     <Content Include="Views\Sanphams\Details.cshtml" />
     <Content Include="Views\Sanphams\Edit.cshtml" />
     <Content Include="Views\Sanphams\Index.cshtml" />
-    <Content Include="Views\Khachhangs\Create.cshtml" />
-    <Content Include="Views\Khachhangs\Delete.cshtml" />
-    <Content Include="Views\Khachhangs\Details.cshtml" />
-    <Content Include="Views\Khachhangs\Edit.cshtml" />
-    <Content Include="Views\Khachhangs\Index.cshtml" />
     <Content Include="Views\Donhangs\Create.cshtml" />
     <Content Include="Views\Donhangs\Delete.cshtml" />
     <Content Include="Views\Donhangs\Details.cshtml" />
@@ -637,6 +624,11 @@
     <Content Include="Views\Nhanvien1\Index.cshtml" />
     <Content Include="Views\Account\Register.cshtml" />
     <Content Include="Views\Account\Login.cshtml" />
+    <Content Include="Views\Khachhangs\Create.cshtml" />
+    <Content Include="Views\Khachhangs\Delete.cshtml" />
+    <Content Include="Views\Khachhangs\Details.cshtml" />
+    <Content Include="Views\Khachhangs\Edit.cshtml" />
+    <Content Include="Views\Khachhangs\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -661,15 +653,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202103151323119_Create_Table_Sanphams.resx">
       <DependentUpon>202103151323119_Create_Table_Sanphams.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202103151327290_Create_Table_Khachhangs.resx">
-      <DependentUpon>202103151327290_Create_Table_Khachhangs.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202103151330290_Add_Column_Khachhangs_emailKH.resx">
-      <DependentUpon>202103151330290_Add_Column_Khachhangs_emailKH.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202103151333560_Alter_Column_Khachhangs_emailKH_Tuoi.resx">
-      <DependentUpon>202103151333560_Alter_Column_Khachhangs_emailKH_Tuoi.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202103151423091_Create_Table_Donhangs.resx">
       <DependentUpon>202103151423091_Create_Table_Donhangs.cs</DependentUpon>
@@ -697,6 +680,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202104200116262_admn.resx">
       <DependentUpon>202104200116262_admn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202105090754431_Create_table_Khanhhang.resx">
+      <DependentUpon>202105090754431_Create_table_Khanhhang.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

@@ -3,16 +3,16 @@ namespace BTL.Migrations
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class Add_Column_Khachhangs_emailKH : DbMigration
+    public partial class Create_table_Khanhhang : DbMigration
     {
         public override void Up()
         {
-            AddColumn("dbo.Khachangs", "emailKH", c => c.String());
+            DropColumn("dbo.Khachangs", "Tuoi");
         }
         
         public override void Down()
         {
-            DropColumn("dbo.Khachangs", "emailKH");
+            AddColumn("dbo.Khachangs", "Tuoi", c => c.Int(nullable: false));
         }
     }
 }
