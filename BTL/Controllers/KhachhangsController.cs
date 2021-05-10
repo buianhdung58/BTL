@@ -135,8 +135,8 @@ namespace BTL.Controllers
                 Khachhang kh = new Khachhang();
                 kh.TenKH = dt.Rows[i][0].ToString();
                 kh.MaKH = dt.Rows[i][1].ToString();
-                kh.SdtKH = dt.Rows[i][1].ToString();
-                kh.Diachi = dt.Rows[i][1].ToString();
+                kh.SdtKH = dt.Rows[i][2].ToString();
+                kh.Diachi = dt.Rows[i][3].ToString();
                 db.Khachhangs.Add(kh);
                 db.SaveChanges();
             }
