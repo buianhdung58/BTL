@@ -15,6 +15,5 @@ namespace BTL.Models
         public string MaKH { get; set; }
         public string SdtKH { get; set; }
         public string Diachi { get; set; }
-       // public string Tuoi { get; set; }
     }
 }
